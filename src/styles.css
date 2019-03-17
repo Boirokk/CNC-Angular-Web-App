@@ -1,0 +1,77 @@
+input.ng-touched.ng-invalid {
+  border: 1px solid;
+  border-color: darkred;
+}
+
+
+.container-fluid {
+  margin: 40px 10% 40px 10%;
+}
+
+.col-md-5 {
+  padding: 0px;
+}
+
+.col-sm-2 {
+  margin-top: 11px;
+
+}
+
+.col-sm-1 {
+  margin-top: 11px
+
+}
+
+.pre-scrollable {
+  max-height: 90vh;
+}
+
+.list-group-item {
+  border-radius: 5px;
+  margin: 8px 0;
+  word-wrap: break-word;
+}
+
+.list-group-item:hover {
+  cursor: pointer;
+  border: 1px solid darkblue;
+  background-color: #F2F2F2;
+}
+
+.validation-error {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: darkred;
+}
+
+table.table-hover tbody tr:hover {
+  cursor: pointer;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+/* TOASTR BUGFIX */
+#toast-container > div {
+  opacity: 1;
+}
+.toast {
+  font-size: initial !important;
+  border: initial !important;
+  backdrop-filter: blur(0) !important;
+}
+.toast-success {
+  background-color: #51A351 !important;
+}
+.toast-error {
+  background-color: #BD362F !important;
+}
+.toast-info {
+  background-color: #2F96B4 !important;
+}
+.toast-warning {
+  background-color: #F89406 !important;
+}

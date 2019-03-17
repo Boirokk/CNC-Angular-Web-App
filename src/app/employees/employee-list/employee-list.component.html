@@ -1,0 +1,56 @@
+<ul class="pre-scrollable list-group">
+  <li [class.timer]="isSelected === i  && started"  *ngFor="let emp of list let i = index" class="list-group-item">
+
+    <div class="row">
+      <div (click)="onEdit(emp)" class="col-sm-7">
+        <div>{{emp.initials}} </div>
+        <div>{{emp.part}} {{emp.manufacturer}} {{emp.model}}</div>
+        <div>{{emp.description}}</div>
+      </div>
+      <div class="col-sm-2">
+        {{transform(emp.time)}}
+      </div>
+      <div class="col-sm-2">
+        <button (click)="onToggleTimer(emp)" (click)="onToggleTimerClass(i)" class="btn btn-default">
+
+
+          <span [hidden]="isSelected === i  && started"> <i class="far fa-clock"></i>&nbsp; Start</span>
+          <span [hidden]="isSelected != i || isSelected === i && !started"><i class="fas fa-clock fa-spin"></i>&nbsp; Stop</span>
+        </button>
+      </div>
+
+      <div class="col-sm-1">
+        <a class="btn text-danger" (click)="onDelete(emp.id)"><i class="far fa-trash-alt"></i></a>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<!--<div>-->
+<!--<table  class="table table-hover">-->
+  <!--<thead>-->
+    <!--<tr>-->
+      <!--<th>Initials</th>-->
+      <!--<th>Part#</th>-->
+      <!--<th>Description</th>-->
+      <!--<th>Manufacurer</th>-->
+      <!--<th>Model</th>-->
+      <!--<th>Time</th>-->
+    <!--</tr>-->
+  <!--</thead>-->
+
+  <!--<tbody>-->
+  <!--<tr *ngFor="let emp of list" >-->
+    <!--<td (click)="onEdit(emp)">{{emp.initials}}</td>-->
+    <!--<td (click)="onEdit(emp)">{{emp.part}}</td>-->
+    <!--<td (click)="onEdit(emp)">{{emp.description}}</td>-->
+    <!--<td (click)="onEdit(emp)">{{emp.manufacturer}}</td>-->
+    <!--<td (click)="onEdit(emp)">{{emp.model}}</td>-->
+    <!--<td (click)="onEdit(emp)" style="font-weight: bold; font-size: medium">2:23</td>-->
+    <!--<td><a class="btn btn-default"><i class="far fa-clock"></i> Start</a></td>-->
+    <!--<td><a class="btn text-danger" (click)="onDelete(emp.id)"><i class="far fa-trash-alt"></i></a></td>-->
+  <!--</tr>-->
+  <!--</tbody>-->
+<!--</table>-->
+
+<!--</div>-->
